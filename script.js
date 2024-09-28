@@ -62,6 +62,8 @@ and explain your blockers - you can still receive partial credit).
 
 
 //------ Cache elements from HTML --------------------------
+
+//-------- Cache elements -----------------------------------
 const mainHeader = document.getElementById('main-header');
 const nameForm = document.querySelector('#name-form');
 const usernameInput = document.querySelector('#username');
@@ -73,26 +75,23 @@ const resultContainer = document.getElementById('result-container');
 const finalScoreText = document.getElementById('final-score');
 const restartButton = document.getElementById('restart-btn');
 
-//------- Questions Array ----------------------------------------
+//----- Questions Array ---------------------------------------
 const questions = [
-    { question:             }
-    { question:             }
-    { question:             }
-    { question:             }
-    { question:             }
-    { question:             }
-]
+    { question:  },
+    { question:  },
+    { question:  }
+];
 
-let questionIndex = 0;
-let score = '';
+let currentQuestionIndex = 0;
+let score = 0;
 
-//------- Form Submission/ Event Listener ------------------------------------------
+//------ Handle Form Submission -------------------------------------
 nameForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    if (usernameInput.value() === '') {
+    if (usernameInput.value.trim() === "") {
         alert("Name is required!");
     } else {
-        startGameSection();
+        startGame();
     }
 });
 
@@ -105,11 +104,10 @@ function startGame() {
 function showQuestion() {
     questionContainer.innerHTML = '';
     const questionData = questions[currentQuestionIndex];
-    const questionText = document.createElement(h2);
+    const questionText = document.createElement('h2');
     questionText.textContent = questionData.question;
     questionContainer.appendChild(questionText);
 
-//------- Display answer options -----------------------------------------
     questionData.answers.forEach(answer => {
         const answerButton = document.createElement('button');
         answerButton.textContent = answer;
@@ -129,7 +127,7 @@ function selectAnswer(event) {
     } else {
         event.target.style.backgroundColor = '';
     }
-}
+
     const allAnswerButtons = document.querySelectorAll('.answer-btn');
     allAnswerButtons.forEach(button => {
         button.disabled = true;
@@ -138,4 +136,26 @@ function selectAnswer(event) {
         }
     });
     nextButton.style.display = 'inline-block';
+}
 
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        endGame();
+    }
+});
+
+function endGame() {
+    gameContainer.style.display = 'none';
+    resultContainer.style.display = 'block';
+    finalScoreText.textContent = `Congratulations, ${usernameInput.value}! Your score is ${score}/${questions.length}.`;
+}
+
+restartButton.addEventListener('click', () => {
+    currentQuestionIndex = 0;
+    score = 0;
+    resultContainer.style.display = 'none';
+    startGameSection.style.display = 'block';
+});
