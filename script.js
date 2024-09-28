@@ -86,5 +86,56 @@ const questions = [
 let questionIndex = 0;
 let score = '';
 
-//------- Form Submission------------------------------------------
+//------- Form Submission/ Event Listener ------------------------------------------
+nameForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (usernameInput.value() === '') {
+        alert("Name is required!");
+    } else {
+        startGameSection();
+    }
+});
+
+function startGame() {
+    startGameSection.style.display = 'none';
+    gameContainer.style.display = 'block';
+    showQuestion();
+}
+
+function showQuestion() {
+    questionContainer.innerHTML = '';
+    const questionData = questions[currentQuestionIndex];
+    const questionText = document.createElement(h2);
+    questionText.textContent = questionData.question;
+    questionContainer.appendChild(questionText);
+
+//------- Display answer options -----------------------------------------
+    questionData.answers.forEach(answer => {
+        const answerButton = document.createElement('button');
+        answerButton.textContent = answer;
+        answerButton.classList.add('answer-btn');
+        answerButton.addEventListener('click', selectAnswer);
+        questionContainer.appendChild(answerButton);
+    });
+    nextButton.style.display = 'none';
+}
+
+function selectAnswer(event) {
+    const selectedAnswer = event.target.textContent;
+    const correctAnswer = questions[currentQuestionIndex].correct;
+    if (selectedAnswer === correctAnswer) {
+        score++;
+        event.target.style.backgroundColor = '';
+    } else {
+        event.target.style.backgroundColor = '';
+    }
+}
+    const allAnswerButtons = document.querySelectorAll('.answer-btn');
+    allAnswerButtons.forEach(button => {
+        button.disabled = true;
+        if (button.textContent === correctAnswer) {
+            button.style.backgroundColor = '';
+        }
+    });
+    nextButton.style.display = 'inline-block';
 
