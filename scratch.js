@@ -1,3 +1,200 @@
+/*
+
+* create a small single-page web application
+* finish the absolute minimum requirements first
+* approach your design through the user's perspective
+* topic and content are secondary to functionality
+* Make frequent commits to the repo
+
+REQUIREMENTS:
+--------------------
+1. Cache at least 1 element using | selectElementById
+2. Cache at least 1 element using | querySelector or querySelectorAll
+3. Use the parent-child-sibling relationship to navigate between elements
+at least once (firstChild, LastChild, parentNode, nextElementSibling, etc)
+4. Iterate over a collection of elements to accomplish some task
+5. Create at least 1 element using | createElement
+6. Use appendChild and/or prepend to add new elements to the DOM.
+7. Use the DocumentFragment interface or HTML templated with the cloneNode
+method to create templated content.
+8. Modify the HTML or text content of at least one element in response to user
+interaction using innerHTML, innerText, or textContent.
+10. Modify the style and/or CSS classes of an element in response to user interactions
+using the style or classList properties.
+11. Modify at least one attribute of an element in response to user interaction.
+12. Register at least two different event listeners and create the associated event
+handler functions.
+13. Use at least two Browser Object Model (BOM) properties or methods.
+14. Include at least one form and/or input with HTML attribute validation.
+15. Include at least one form and/or input with DOM event-based validation. (This can
+be the same form or input as the one above, but should include event-based
+validation in addition to the HTML attribute validation.)
+16. Ensure that the program runs without errors (comment out things that do not work,
+and explain your blockers - you can still receive partial credit).
+17. Commit frequently to the git repository.
+18. Include a README file that contains a description of your application.
+19. Level of effort displayed in creativity, presentation, and user experience.
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Halloween Taste Buds</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li style="float:right"><a href="#about">Explore</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grid-item1">
+            <h2>This is Halloween</h2>
+            <p>Far far away, where dracula lived in the transylvania hillside with bloodlust and loneliness, the wolves
+                hunted in the bright blood moonlight. Twist the bones and bend the back hocus pocus domi ocus. which way
+                does the wicked witch fly on spooky halloween nights?</p>
+        </div>
+
+
+
+        <div class="grid-container">
+            <div class="grid-item2">
+                <p>What about your favorite Halloween movie?</p>
+                <input [type=text]>
+                <p>What is your favorite way to decorate?</p>
+                <input [type=text]>
+                <p>Share you costume ideas below:</p>
+                <input [type=text]>
+            </div>
+
+
+
+            <img class="details-img" src="/Users/jenniferdunsmore/Desktop/IMG_0700.jpeg" alt=>
+            <div></div>
+
+            <p></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Best Halloween Themed Movies</th>
+                        <th>Best Themed Decorations</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Nightmare Before Christmas</td>
+                        <td>NBC Decorations</td>
+                    </tr>
+                    <tr>
+                        <td>Hocus Pocus</td>
+                        <td>Witches Coven</td>
+                    </tr>
+                    <tr>
+                        <td>Halloween</td>
+                        <td>Scary Killer</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+    </main>
+    <footer>Made with angst by a struggling bootcamp student
+
+        <select name="Exlpore">
+            <option value="currentProjects">Current Projects</option>
+            <option value="spookyCreations">Spooky Creations</option>
+            <option value="fangtasticFinds">Fangtastic</option>
+
+
+    </footer>
+
+</body>
+
+</html>
+
+
+
+-------------------------------------
+Landing Page from first SBA----------
+-------------------------------------
+<!DOCTYPE html>
+<html>
+<!---............... Landing Page ..................-->
+
+<head>
+    <title>Spooky Little Developer's Monster Creations</title>
+    <link rel="stylesheet" href="styles.css">
+    <div class="snowflakes">
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+        <div class="snowflake">
+            <img src="https://media1.giphy.com/media/0xR7MUO0hJfWtco7C6/giphy.gif" />
+        </div>
+    </div>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="active" href="landing.html">Home</a></li>
+                <li><a href="index.html">Creations</a></li>
+                <li><a href="details.html">About</a></li>
+                <li style="float:right"><a href="details.html">Something Wicked This Way Comes...</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Spooky Little Developer's Monster Creations</h1>
+        <div class="image-container">
+            <img src="/Users/jenniferdunsmore/Library/Mobile Documents/com~apple~CloudDocs/Downloads/Designer.png">
+        </div>
+    </main>
+    <footer>
+        Made with angst by a struggling bootcamp student
+    </footer>
+</body>
+
+----------------------------------------------------------
+styles.css from first SBA
+----------------------------------------------------------
 @import url(https://fonts.googleapis.com/css?family=Griffy:regular);
 
 body {
@@ -174,7 +371,6 @@ body {
     main {
         padding: 16px;
     }
-*/
 
     /* -------------Main------------------ */
     /* ---------------------------------- */
@@ -182,7 +378,7 @@ body {
 
     /* ---------------------------------- */
     /* -------------Landing-------------- */
-
+    /*
     .image-container {
         width: 60%;
         margin: auto;
@@ -201,7 +397,7 @@ body {
 
     /* ----------------------------------- */
     /* -------------Nav Bar--------------- */
-
+    /*
     ul {
         list-style-type: none;
         margin: 0;
@@ -271,7 +467,7 @@ body {
     }
 
     /* .......Landing page/title/Spooky Little Developer's Monster Creations .......*/
-
+    /*
     h1 {
         text-align: center;
         color: #e30cd4;
@@ -281,7 +477,7 @@ body {
     }
 
     /* ...............details/about/This is Halloween ...............................*/
-
+    /*
     h2 {
         text-align: center;
         color: #6de30c;
@@ -291,7 +487,7 @@ body {
     }
 
     /* ...............details/about/grid-container...............................*/
-
+    /*
     .grid-container {
         display: grid;
         margin: 15px;
@@ -300,7 +496,7 @@ body {
     }
 
     /* ..........details/about/grid-items/animation............................... */
-
+    /*
     .grid-item {
         transition: all 0.01s linear;
         margin: 35px;
@@ -312,7 +508,7 @@ body {
     }
 
     /* ..........detailsThis is Halloween grid-item1...............................*/
-
+    /*
     .grid-item1 {
         transition: all 0.01s linear;
         margin: 35px;
@@ -325,7 +521,7 @@ body {
     }
 
     /* ..........details/about/grid-item2, box & forms................................*/
-
+    /*
     .grid-item2 {
         transition: all 0.01s linear;
         margin: 35px;
@@ -338,7 +534,7 @@ body {
     }
 
     /* ............grid hover- details/about & index...................................*/
-
+    /*
     .grid-item:hover {
         top: 8px;
         left: 2px;
@@ -351,10 +547,10 @@ body {
 
     /*..................................*/
     /* -----------NBC gif--------------- */
-
+    /*
     .image-container {
         /*will have to tinker more with grid to fix*/
-
+        /*
         display: grid;
         align-items: right;
     }
@@ -369,7 +565,7 @@ body {
 
     /* --------------------------------- */
     /* -------------Table--------------- */
-
+    /*
     .table-container {
         background-color: #ffffff;
         border: 3px solid #0aa021;
@@ -409,7 +605,7 @@ body {
 
     /* --------------------------------- */
     /* -------------Footer--------------- */
-    
+    /*
     footer {
         padding-top: 24px;
         padding-bottom: 24px;
