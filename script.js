@@ -44,8 +44,8 @@ const restartButton = document.getElementById('restart-btn');
 
 //----- Questions Array ---------------------------------------
 const questions = [
-    { question: "In America, what date do we celebrate 'Halloween'?, answers: ['November 1st, 'September 31st', 'October 31st', 'October 13th'], correct: 'October 31st'},
-    { question: "Where is Count Dracula's Castle in Bram Stoker's infamous book about the legendary vampire?", answers: ["Edinburgh, Scotland", "Paris, France", "Transylvania, Romania", "Rome, Italy"] answer: "Transylvania, Romania"},
+    { question: "In America, what date do we celebrate 'Halloween'?", answers: ['November 1st', 'September 31st', 'October 31st', 'October 13th'], correct: 'October 31st'},
+    { question: "Where is Count Dracula's Castle in Bram Stoker's infamous book about the legendary vampire?", answers: ["Edinburgh, Scotland", "Paris, France", "Transylvania, Romania", "Rome, Italy"], correct: "Transylvania, Romania"},
     { question: "Who were some of the earliest to celebrate what we now call Halloween?", answers: ["Vikings", "Druids", "Native Americans", "Anglo-Saxons"], correct: "Druids"}
 ];
 
