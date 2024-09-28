@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SBA 316 Document Object Model</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <body>
-        <header id="main-header">
-            <nav>
-                <ul>
-                    <li><a class="active" href="landing.html">Home</a></li>
-                    <li><a href="index.html">Creations</a></li>
-                    <li><a href="details.html">About</a></li>
-                    <li style="float:right"><a href="details.html">Something Wicked This Way Comes...</a></li>
-                </ul>
-            </nav>
-        </header>
+</head>
 
+<body>
+    <header id="main-header"> <!--cached element mainHeader-->
+        <h1>Spooky Trivia</h1>
+        <nav>
+            <ul>
+                <li><a class="active" href="landing.html">Home</a></li>
+                <li><a href="index.html">Creations</a></li>
+                <li><a href="details.html">About</a></li>
+                <li style="float:right"><a href="details.html">Something Wicked This Way Comes...</a></li>
+            </ul>
+        </nav>
 
-
-
+    </header>
+    <main>
+        <section id="start-game"> <!--cached element startGame-->
+            <form id="" name-form"> <!-- cached element usernameForm-->
+                <label for="username">Enter your name:</label>
+                <input type="text" id="" username" name="username" required> <!--cached element userInput-->
+                <button type="submit">Start Game</button>
+            </form>
+        </section>
+        <section id="game-container" style="display:none;"> <!--cached eleent gameContainer-->
+            <div id="question-container"> <!--cached element questionContainer-->
+                <!-----------Questions added-------------->
+            </div>
+            <button id="next-btn" style="display:none;">Next Question</button>
+        </section>
+        <section id="result-container" style="display:none;">  <!--cached element resultCOntainer--->
+            <h2>Game Over!</h2>
+            <p id="final-score"></p>
+            <button id="restart-btn"></button>
+        </section>
+    </main>
+<footer>
+    2024 Spooky Trivia
+</footer>
 </body>
 </html>
