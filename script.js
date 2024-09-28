@@ -75,26 +75,32 @@ function showQuestion() {
     questionText.textContent = questionData.question;
     questionContainer.appendChild(questionText);
 
+//---- Attempt to use DocumentFragment --------------------------------
+    const fragment = document.createDocumentFragment();
     questionData.answers.forEach(answer => {
         const answerButton = document.createElement('button');
         answerButton.textContent = answer;
         answerButton.classList.add('answer-btn');
         answerButton.addEventListener('click', selectAnswer);
+        fragment.appendChild(answerButton); // Append to fragment
         questionContainer.appendChild(answerButton);
     });
+    questionContainer.appendChild(fragment); // append fragment to container
     nextButton.style.display = 'none';
 }
 
 function selectAnswer(event) { //event.target.parentNode - from answer button to its parent, question container
     const selectedAnswer = event.target.textContent;
     const correctAnswer = questions[currentQuestionIndex].correct;
+    // Parent-Child
+    // remove | const answerContainer = event.target.parentNode; // navigate to parent element
     if (selectedAnswer === correctAnswer) {
         score++;
         event.target.style.backgroundColor = '';
     } else {
         event.target.style.backgroundColor = '';
     }
-
+    // Disable all buttons after selecting one
     const allAnswerButtons = document.querySelectorAll('.answer-btn');
     allAnswerButtons.forEach(button => {
         button.disabled = true;
@@ -117,6 +123,7 @@ nextButton.addEventListener('click', () => {
 function endGame() {
     gameContainer.style.display = 'none';
     resultContainer.style.display = 'block';
+    localStorage.setItem('triviaScore', score); //Storing in local storage (?)
     finalScoreText.textContent = `Congratulations, ${usernameInput.value}! Your score is ${score}/${questions.length}.`;
 }
 
