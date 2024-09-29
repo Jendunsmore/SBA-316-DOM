@@ -132,4 +132,4 @@ restartButton.addEventListener('click', () => {
     score = 0;
     resultContainer.style.display = 'none';
     startGameSection.style.display = 'block';
-});
+});`    `
