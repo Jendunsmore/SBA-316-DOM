@@ -12,7 +12,7 @@ body {
 
 
 /* customizable snowflake styling */
-/*
+
 .snowflake {
     color: #fff;
     font-size: 1em;
@@ -152,9 +152,14 @@ body {
     animation-delay: 3s, 1s;
 }
 
-.snowflake:nth-of-type(10)
+.snowflake:nth-of-type(10) {
+    left: 95%;
+    -webkit-animation-delay: 4s, 2s;
+    animation-delay: 4s, 2s;
+}
 
-/* Demo Purpose Only
+
+/*Demo Purpose Only */
 .demo {
     font-family: 'Raleway', sans-serif;
     color: #fff;
@@ -174,7 +179,7 @@ body {
     bottom: 0;
     display: block;
 }
-*/
+
 
     /* -------------Main------------------ */
     /* ---------------------------------- */
@@ -193,17 +198,23 @@ main {
 
 /*-------*/
 #question-container {
-    background-color:#fdfbf7;
-    border: 2px solid #333333;
+    background-color:#2f2e2c;
+    border: 2px solid #c40dba;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: 0 0 20px rgba(254, 233, 40, 0.2);
+
 }
 
 button {
-    padding: 10px 20px;
-    margin: 10px;
+    background-color:#ed890d;
+    border: 2px solid #daac06;
+    padding: 10px 20px ;
+    margin: 30px;
+    justify-content: center;
     cursor: pointer;
+    box-shadow: 1px 1px  rgb(236, 249, 4);
 }
 
 
@@ -293,7 +304,7 @@ button {
 
     /*--------------------------------- */
     /* -------------Grid--------------- */
-    /*
+
     img {
         width: 100%;
     }
@@ -399,7 +410,7 @@ button {
     /* -------------Table--------------- */
 
     .table-container {
-        background-color: #ffffff;
+        background-color: #79267572;
         border: 3px solid #0aa021;
         border-radius: 5px;
         padding: 5px;
@@ -449,7 +460,7 @@ button {
         opacity: 95%;
         font-family: Griffy, cursive;
         font-weight: 250;
-        font-size: smaller;
+        font-size: x-small;
         border-top: 2px solid rgb(171, 26, 161);
     }
 

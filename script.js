@@ -46,7 +46,17 @@ const restartButton = document.getElementById('restart-btn');
 const questions = [
     { question: "In America, what date do we celebrate 'Halloween'?", answers: ['November 1st', 'September 31st', 'October 31st', 'October 13th'], correct: 'October 31st'},
     { question: "Where is Count Dracula's Castle in Bram Stoker's infamous book about the legendary vampire?", answers: ["Edinburgh, Scotland", "Paris, France", "Transylvania, Romania", "Rome, Italy"], correct: "Transylvania, Romania"},
-    { question: "Who were some of the earliest to celebrate what we now call Halloween?", answers: ["Vikings", "Druids", "Native Americans", "Anglo-Saxons"], correct: "Druids"}
+    { question: "Who were some of the earliest to celebrate what we now call Halloween?", answers: ["Vikings", "Druids", "Native Americans", "Anglo-Saxons"], correct: "Druids"},
+    { question: "Where did the tradition of Halloween originate", answers: ["United States", "Ireland", "Mexico", "Spain"], correct: "Ireland"},
+    { question: "What is the traditional vegetable originally used to make jack-o-lanterns?", answers: ["pumpkin", "turnip", "potato", "squash"], correct: "turnip"},
+    { question: "What famous magician died on Halloween in 1926", answers: ["David Copperfield", "Harry Houdini", "Criss Angel", "Penn Jillette"], correct: "Harry Houdini"},
+    { question: "Which country is credited with the creation of the holiday Día de los Muertos", answers: ["Brazil", "Mexico", "Spain", "italy"], correct: "Mexico"},
+    { question: "Which horror movie villain famously haunts the dreams of teenagers", answers: ["Jason Vorhees", "Michael Myers", "Freddy Krueger", "Leatherface"], correct: "Freddy Krueger"},
+    { question: "What does the word 'Halloween' mean?", answers: ["Night of the Dead", "Hallowed Evening", "Spirit Day", "All Hallows Eve"], correct: "Hallowed Evening"},
+    { question: "What candy was voted the most popular Halloween treat in the U.S. in recent years?", answers: ["Candy Corn", "Snickers", "Reese's Peanut Butter Cups", "M&M's"], correct: "Reese's Peanut Butter Cups"},
+    { question: "In the movie 'Hocus Pocus', what are the names of the three Sanderson sisters?", answers: ["Sabrina, Helda, Zelda", "Dorothy, Glenda, Oz", "Winifred, Mary, Sarah", "Mary, Anna, Elizabeth"], correct: "Winifred, Mary, Sarah"},
+    { question: "What year did the tradition of trick-or-treating become popular in the U.S.?", answers: ["1900s", "1920s", "1950s", "1980s"], correct: "1950s"},
+    { question: "What iconic Halloween character is based on a novel by Mary Shelley?", answers: ["Dracula", "The Mummy", "Frankenstein's Monster", "The Wolfman"], correct: "Frankenstein's Monster"},
 ];
 
 let currentQuestionIndex = 0;
@@ -83,7 +93,6 @@ function showQuestion() {
         answerButton.classList.add('answer-btn');
         answerButton.addEventListener('click', selectAnswer);
         fragment.appendChild(answerButton); // Append to fragment
-        questionContainer.appendChild(answerButton);
     });
     questionContainer.appendChild(fragment); // append fragment to container
     nextButton.style.display = 'none';
@@ -96,7 +105,7 @@ function selectAnswer(event) { //event.target.parentNode - from answer button to
     // remove | const answerContainer = event.target.parentNode; // navigate to parent element
     if (selectedAnswer === correctAnswer) {
         score++;
-        event.target.style.backgroundColor = '';
+        event.target.style.backgroundColor = 'e286f7c9';
     } else {
         event.target.style.backgroundColor = '';
     }
